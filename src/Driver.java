@@ -16,5 +16,36 @@ public class Driver {
 	            investors[i]= new Investor(i+1+100);
 
 	}
+	public static void HighestCapital(Company []obj)
+	{
+		int highest = obj[0].Capital();
+		int loc = 0;
+		for(int i=1; i<100; i++)
+		{
+			if(highest < obj[i].Capital())
+			{
+				highest = obj[i].Capital();
+				loc = i;
+			}
+		}
+		System.out.println("\n\t\t///// Highest Capital Company /////");
+		obj[loc].DisplayCompany();
+	}
+	
+	public static void LowestCapital(Company[] obj)
+	{
+		int lowest = obj[0].Capital();
+		int loc = 0;
+		for(int i=1; i<100; i++)
+		{
+			if(lowest > obj[i].Capital())
+			{
+				lowest = obj[i].Capital();
+				loc = i;
+			}
+		}
+		System.out.println("\n\t\t///// Lowest Capital Company /////");
+		obj[loc].DisplayCompany();
+	}
 }
 	
