@@ -14,28 +14,20 @@ class Investor
 
 	}
 
-	public int getInvestorID() {
-		return InvestorID;
+	public void UpdateShates( int shares) {
+		this.Shares = shares;
 	}
 
-	public void setInvestorID(int investorID) {
-		InvestorID = investorID;
+	public int TotalShares(){
+		return this.Shares;
 	}
 
-	public int getBudget() {
-		return Budget;
+	public int GetInvestorID() {
+		return this.InvestorID;
 	}
 
-	public void setBudget(int budget) {
-		Budget = budget;
-	}
-
-	public int getShares() {
-		return Shares;
-	}
-
-	public void setShares(int shares) {
-		Shares = shares;
+	public int GetBudget() {
+		return this.Budget;
 	}
 	
 	
