@@ -10,7 +10,6 @@ class Investor
 		this.InvestorID = id;
 		this.Budget = (int) (Math.random()*(10000 - 1000) + 1000);
 		this.Shares = 0;
-	
 
 	}
 
@@ -38,6 +37,7 @@ class Investor
 		System.out.println(" > Investor Shares : " + this.Shares);
 	
 }
+	public void InvestAmount(int amount) { // Deduct amount from budget .....
 	
-	
+	}
 }
