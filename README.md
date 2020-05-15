@@ -12,5 +12,5 @@ companies and investor dynamically.
 be contains the logics and strategies to sell Shares of companies and invest, and simulator of all this.
 
 3- Private Class Data =  reducing exposure of attributes by limiting their visibility and  number of class attributes by 
-encapsulating them in single Data object, we've beem used that concept while will will have be accessing the Private members 
+encapsulating them in single Data object, we've been using that concept while will will have be accessing the Private members 
 of class using Accessors.
