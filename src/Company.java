@@ -16,6 +16,9 @@ class Company {
 		{
 			return this.NumberOfShares * this.SharePrice;
 		}
+		
+		
+		
 		public void DisplayCompany() {// Showing Company details .....
 			
 			System.out.println("\n > Company ID : " + this.CompanyID);
@@ -23,23 +26,14 @@ class Company {
 			System.out.println(" > Company Share Price : " + this.SharePrice);
 			
 		}
-		public int getCompanyID() {
-			return CompanyID;
+		public int SellShare() { // Selling share any random between 1-10
+		int share = (int) (Math.random()*(10) + 1); // Any random share MAXIMUM 20 ...
+		this.NumberOfShares = this.NumberOfShares - share;
+		return share;	
+			
 		}
-		public void setCompanyID(int companyID) {
-			CompanyID = companyID;
-		}
-		public int getNumberOfShares() {
-			return NumberOfShares;
-		}
-		public void setNumberOfShares(int numberOfShares) {
-			NumberOfShares = numberOfShares;
-		}
-		public int getSharePrice() {
-			return SharePrice;
-		}
-		public void setSharePrice(int sharePrice) {
-			SharePrice = sharePrice;
-		}
+		
+		
+		
 		
 }
