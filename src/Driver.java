@@ -36,6 +36,7 @@ public class Driver {
 	}
 	
 	
+	
 	public static void CompanyPosition(Company[] obj)
 	{
 		//////// Top Companies //////////
@@ -56,10 +57,9 @@ public class Driver {
 				idx++;
 			}
 		}
-	
-		}
-		
+			
 
+	}
 	
 	public static void HighestShare(Investor[] obj)
 	{
@@ -133,7 +133,12 @@ public class Driver {
 				idx++;
 			}
 		}
-
+		System.out.println("\n\t\t///// BOTTOM Position Investors /////");
+		for(int i=0; i<idx; i++)
+		{
+			j = locs2[i];
+			obj[j].DisplayInvestor();
+		}
 	}
 	
 	
@@ -166,7 +171,7 @@ public class Driver {
 			return false;
 	}
 	
-	Main Function////////////////////
+	//Main Function
 	public static void main(String[] args) {
 	
 		// Creating 100 Companies Dynamically ....
