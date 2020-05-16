@@ -176,7 +176,6 @@ public class Driver {
 		}
 	}
 	
-	
 	public static boolean AllCompaniesEmpty(Company[] company) // When all companies share are ended ...
 	{
 		int i;
@@ -190,8 +189,7 @@ public class Driver {
 		else
 			return false;
 	}
-	
-	
+		
 	public static boolean AllInvestorsEmpty(Investor[] investors) // When all Investors Budget is ended ......
 	{
 		int i;
@@ -205,8 +203,6 @@ public class Driver {
 		else
 			return false;
 	}
-	
-	
 	
 	//////// Simulation /////////////
 	public static void Simulator(Company[] company, Investor[] investor)
