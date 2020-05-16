@@ -36,32 +36,137 @@ public class Driver {
 	}
 	
 	
+	public static void CompanyPosition(Company[] obj)
+	{
+		//////// Top Companies //////////
+		int []locs= new int[20];
+		int highest = obj[0].Capital();
+		locs[0] = 0;
+		int idx = 1, j=0;
+		for(int i=1; i<100; i++)
+		{
+			if(highest < obj[i].Capital())
+			{
+				highest = obj[i].Capital();
+				locs[0] = i;
+			}
+			else if(highest == obj[i].Capital())
+			{
+				locs[idx] = i;
+				idx++;
+			}
+		}
 	
-	
-	
-	
-	
-	// FERNANDO ADD HERE COMAPNY AND INVESTOR BOTTONS 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		}
+		
 
-	//////////////////////Main Function////////////////////
+	
+	public static void HighestShare(Investor[] obj)
+	{
+		int highest = obj[0].TotalShares();
+		int loc = 0;
+		for(int i=1; i<100; i++)
+		{
+			if(highest < obj[i].TotalShares())
+			{
+				highest = obj[i].TotalShares();
+				loc = i;
+			}
+		}
+		System.out.println("\n\t\t///// Highest Share Investor /////");
+		obj[loc].DisplayInvestor();
+	}
+	
+	public static void LowestShare(Investor[] obj)
+	{
+		int lowest = obj[0].TotalShares();
+		int loc = 0;
+		for(int i=1; i<100; i++)
+		{
+			if(lowest > obj[i].TotalShares())
+			{
+				lowest = obj[i].TotalShares();
+				loc = i;
+			}
+		}
+		System.out.println("\n\t\t///// Lowest Share Investor /////");
+		obj[loc].DisplayInvestor();
+	}
+	
+	public static void InvestorPosition(Investor[] obj)
+	{
+		////////Top Investors //////////
+		int []locs= new int[10];
+		int highest = obj[0].TotalShares();
+		locs[0] = 0;
+		int idx = 1, j=0;
+		for(int i=1; i<100; i++)
+		{
+			if(highest < obj[i].TotalShares())
+			{
+				highest = obj[i].TotalShares();
+				locs[0] = i;
+			}
+			else if(highest == obj[i].TotalShares())
+			{
+				locs[idx] = i;
+				idx++;
+			}
+	
+		}
+		
+		/////// Bottom Investors ///////
+		int lowest = obj[0].TotalShares();
+		int []locs2 = new int[10];
+		locs2[0] = 0;
+		idx = 1;
+		for(int i=1; i<100; i++)
+		{
+			if(lowest > obj[i].TotalShares())
+			{
+				lowest = obj[i].TotalShares();
+				locs2[0] = i;
+			}
+			else if(lowest == obj[i].TotalShares())
+			{
+				locs2[idx] = i;
+				idx++;
+			}
+		}
+
+	}
+	
+	
+	public static boolean AllCompaniesEmpty(Company[] company) // When all companies share are ended ...
+	{
+		int i;
+		for(i=0; i<100; i++)
+		{
+			if(!company[i].IsEmptyShares())
+				break;
+		}
+		if(i == 100)
+			return true;
+		else
+			return false;
+	}
+	
+	
+	public static boolean AllInvestorsEmpty(Investor[] investors) // When all Investors Budget is ended ......
+	{
+		int i;
+		for(i=0; i<100; i++)
+		{
+			if(!investors[i].IsEmptyBudget())
+				break;
+		}
+		if(i == 100)
+			return true;
+		else
+			return false;
+	}
+	
+	Main Function////////////////////
 	public static void main(String[] args) {
 	
 		// Creating 100 Companies Dynamically ....
